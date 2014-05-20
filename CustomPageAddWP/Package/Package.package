@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="e0c165c6-9735-4d30-b175-1eb39f94ffaa" solutionId="e0c165c6-9735-4d30-b175-1eb39f94ffaa" resetWebServer="false" sharePointProductVersion="15.0" name="CustomPageAddWP" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <features>
+    <featureReference itemId="52d66ea5-b3ca-4514-9bcb-e6f0c67f8385" />
+    <featureReference itemId="41448612-d11a-4b5a-9f44-32d00e2551cd" />
+  </features>
+</package>

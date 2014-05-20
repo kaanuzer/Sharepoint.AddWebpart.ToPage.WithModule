@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5E053FE6-F6FB-4444-80C6-D7CC0AE80118}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CustomPageAddWP</RootNamespace>
+    <AssemblyName>CustomPageAddWP</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetOfficeVersion>15.0</TargetOfficeVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{C1CDDADD-2546-481F-9697-4EA41081F2FC};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SandboxedSolution>False</SandboxedSolution>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.SharePoint" />
+    <Reference Include="Microsoft.SharePoint.Client.ServerRuntime" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CustomWebpart\CustomWebpart.cs" />
+    <Compile Include="CustomWebpart\CustomWebpartUserControl.ascx.cs">
+      <DependentUpon>CustomWebpartUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomWebpart\CustomWebpartUserControl.ascx.designer.cs">
+      <DependentUpon>CustomWebpartUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CustomPageLibrary\CustomPageLibraryInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{6e640473-0678-4935-ae83-2d0c96bc7ea9}</SharePointProjectItemId>
+    </None>
+    <None Include="CustomPageLibrary\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{a4a4b9fb-a497-429d-b189-be8be70e352f}</SharePointProjectItemId>
+    </None>
+    <None Include="CustomWebpartPageModule\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{5b11d669-b25c-4a14-b366-ecd331d83403}</SharePointProjectItemId>
+    </None>
+    <None Include="CustomWebpart\CustomWebpart.webpart" />
+    <None Include="CustomWebpart\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{b0425358-7cb6-44f4-a63f-79f1a0fd0cc3}</SharePointProjectItemId>
+    </None>
+    <None Include="Features\CustomPageLibrary\CustomPageLibrary.feature">
+      <FeatureId>{52d66ea5-b3ca-4514-9bcb-e6f0c67f8385}</FeatureId>
+    </None>
+    <None Include="Features\CustomWebpart\CustomWebpart.feature">
+      <FeatureId>{41448612-d11a-4b5a-9f44-32d00e2551cd}</FeatureId>
+    </None>
+    <None Include="key.snk" />
+    <None Include="Package\Package.package">
+      <PackageId>{e0c165c6-9735-4d30-b175-1eb39f94ffaa}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="CustomPageLibrary\CustomPageLibraryInstance\Elements.xml" />
+    <Content Include="CustomPageLibrary\EditDlg.htm" />
+    <Content Include="CustomPageLibrary\Elements.xml" />
+    <Content Include="CustomPageLibrary\FileDlg.htm" />
+    <Content Include="CustomPageLibrary\Repair.aspx" />
+    <Content Include="CustomPageLibrary\Schema.xml" />
+    <Content Include="CustomPageLibrary\Upload.aspx" />
+    <Content Include="CustomWebpartPageModule\Elements.xml" />
+    <Content Include="CustomWebpartPageModule\MyPage.aspx" />
+    <Content Include="CustomWebpart\CustomWebpartUserControl.ascx" />
+    <Content Include="CustomWebpart\Elements.xml" />
+    <Content Include="Features\CustomPageLibrary\CustomPageLibrary.Template.xml">
+      <DependentUpon>CustomPageLibrary.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\CustomWebpart\CustomWebpart.Template.xml">
+      <DependentUpon>CustomWebpart.feature</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
+</Project>

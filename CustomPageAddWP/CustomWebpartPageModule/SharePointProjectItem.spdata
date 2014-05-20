@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ProjectItem Type="Microsoft.VisualStudio.SharePoint.Module" DefaultFile="Elements.xml" SupportedTrustLevels="All" SupportedDeploymentScopes="Web, Site" xmlns="http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel">
+  <Files>
+    <ProjectItemFile Source="Elements.xml" Target="CustomWebpartPageModule\" Type="ElementManifest" />
+    <ProjectItemFile Source="MyPage.aspx" Target="CustomWebpartPageModule\" Type="ElementFile" />
+  </Files>
+</ProjectItem>

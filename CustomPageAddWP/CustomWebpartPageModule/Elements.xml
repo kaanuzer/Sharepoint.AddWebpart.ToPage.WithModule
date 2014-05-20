@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="CustomWebpartPageModule" Url="Lists/CustomPageLibrary">
+    <File Path="CustomWebpartPageModule\MyPage.aspx" Url="MyPage.aspx" Type="GhostableInLibrary" IgnoreIfAlreadyExists="False" >
+      <AllUsersWebPart WebPartOrder="0" WebPartZoneID="TopRow">
+        <![CDATA[        
+          <webParts>
+            <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+              <metaData>
+                <type name="CustomPageAddWP.CustomWebpart.CustomWebpart, $SharePoint.Project.AssemblyFullName$" />
+                <importErrorMessage>$Resources:core,ImportErrorMessage;</importErrorMessage>
+              </metaData>
+              <data>
+                <properties>
+                  <property name="Title" type="string">CustomPageAddWP - CustomWebpart</property>
+                  <property name="Description" type="string">My Visual Web Part</property>
+                </properties>
+              </data>
+            </webPart>
+          </webParts>          
+    ]]>
+      </AllUsersWebPart>
+    </File>
+  </Module>
+</Elements>
